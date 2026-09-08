@@ -1,0 +1,32 @@
+/*
+Theme Name: School Custom
+Theme URI:
+Author:
+Author URI:
+Description: A blank block theme for the School assignment.
+Requires at least: 7.1
+Tested up to: 7.1
+Requires PHP: 5.7
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: school-custom
+Tags: full-site-editing
+*/
+
+
+/* Show keyboard users which element is selected. */
+.wp-site-blocks :focus-visible {
+  outline: 3px solid #003C71;
+  outline-offset: 3px;
+}
+
+/* Make only the Apply Now menu link look like our buttons. */
+.nav-apply > .wp-block-navigation-item__content {
+  background-color: var(--wp--preset--color--button);
+  color: var(--wp--preset--color--base);
+  border-radius: 0.5rem;
+  padding: 0.75rem clamp(1rem, 3vw, 2rem);
+  text-decoration: none;
+  display: inline-block;
+}
