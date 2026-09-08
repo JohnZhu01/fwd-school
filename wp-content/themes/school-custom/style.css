@@ -30,3 +30,43 @@ Tags: full-site-editing
   text-decoration: none;
   display: inline-block;
 }
+
+/* Single Student: portrait beside the student's own information. */
+/* Student listing: fewer columns on narrower screens. */
+.students-listing .student-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+.student-cards .wp-block-post-featured-image {
+  margin: 0;
+}
+@media (max-width: 60rem) {
+  .students-listing .student-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 37.5rem) {
+  .students-listing .student-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.student-profile .wp-block-post-title {
+  margin-top: 0;
+}
+.student-profile .student-profile-divider {
+  width: 5.5rem;
+  height: 2px;
+  border: 0;
+  margin: 0.75rem auto clamp(1.5rem, 4vw, 3rem);
+}
+.student-profile .wp-block-post-featured-image {
+  margin-top: 0;
+}
+.student-profile .wp-block-post-content .wp-block-button__link {
+  border-radius: 999px;
+  padding: 1rem 1.75rem;
+  font-size: var(--wp--preset--font-size--medium);
+  font-weight: 700;
+  text-decoration: none;
+}

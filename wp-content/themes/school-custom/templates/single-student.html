@@ -1,0 +1,27 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"student-profile","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group student-profile" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--50)">
+<!-- wp:columns {"verticalAlignment":"top","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-columns are-vertically-aligned-top">
+<!-- wp:column {"verticalAlignment":"top"} -->
+<div class="wp-block-column is-vertically-aligned-top">
+<!-- wp:post-featured-image {"isLink":false,"aspectRatio":"2/3","scale":"cover"} /-->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"verticalAlignment":"top"} -->
+<div class="wp-block-column is-vertically-aligned-top">
+<!-- wp:post-title {"level":1,"isLink":false,"textAlign":"center","textColor":"contrast","fontSize":"x-large"} /-->
+<!-- wp:separator {"backgroundColor":"button","className":"student-profile-divider"} -->
+<hr class="wp-block-separator has-text-color has-button-color has-alpha-channel-opacity has-button-background-color has-background student-profile-divider"/>
+<!-- /wp:separator -->
+<!-- wp:post-terms {"term":"student_type","prefix":"Speciality: ","separator":", "} /-->
+<!-- wp:post-content /-->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

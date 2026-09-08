@@ -1,0 +1,29 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"students-listing","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
+<main class="wp-block-group students-listing" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)">
+<!-- wp:post-title {"level":1,"textAlign":"center"} /-->
+<!-- wp:post-content /-->
+<!-- wp:query {"queryId":20,"query":{"perPage":6,"pages":0,"offset":0,"postType":"student","order":"asc","orderBy":"title","inherit":false},"align":"wide"} -->
+<div class="wp-block-query alignwide">
+<!-- wp:post-template {"className":"student-cards","layout":{"type":"grid","columnCount":3}} -->
+<!-- wp:post-featured-image {"isLink":true,"sizeSlug":"student-portrait","aspectRatio":"2/3","scale":"cover"} /-->
+<!-- wp:post-title {"level":2,"isLink":true,"fontSize":"large"} /-->
+<!-- wp:post-terms {"term":"student_type","prefix":"Speciality: ","separator":", "} /-->
+<!-- /wp:post-template -->
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
+<!-- wp:query-pagination-previous /-->
+<!-- wp:query-pagination-numbers /-->
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>No students have been published yet. Please check back soon.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results -->
+</div>
+<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
