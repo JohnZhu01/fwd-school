@@ -1,0 +1,5 @@
+# Local theme backups are not part of the site source.
+/theme-backups/
+
+# Font Library uploads are local; theme-owned fonts are tracked in assets/fonts.
+/wp-content/uploads/fonts/

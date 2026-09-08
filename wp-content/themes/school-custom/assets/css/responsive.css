@@ -1,0 +1,40 @@
+/* Shared front-end and editor safeguards; core blocks retain their mobile layouts. */
+:where(.wp-site-blocks, .editor-styles-wrapper) {
+	overflow-wrap: anywhere;
+}
+:where(.wp-site-blocks, .editor-styles-wrapper) :where(.wp-block-column, .wp-block-group, .wp-block-post, .wp-block-navigation, .wp-block-search) {
+	min-width: 0;
+}
+:where(.wp-site-blocks, .editor-styles-wrapper) :where(img, video) {
+	max-width: 100%;
+}
+:where(.wp-site-blocks, .editor-styles-wrapper) :where(.wp-block-image img, .wp-block-video video) {
+	height: auto;
+}
+:where(.wp-site-blocks, .editor-styles-wrapper) :where(iframe, input, select, textarea) {
+	max-width: 100%;
+	box-sizing: border-box;
+}
+:where(.wp-site-blocks, .editor-styles-wrapper) :where(.wp-block-table, pre) {
+	max-width: 100%;
+	overflow-x: auto;
+}
+:where(.wp-site-blocks, .editor-styles-wrapper) .wp-block-button__link {
+	box-sizing: border-box;
+	max-width: 100%;
+	white-space: normal;
+	overflow-wrap: anywhere;
+}
+@media (max-width: 37.5rem) {
+	:where(.wp-site-blocks, .editor-styles-wrapper) .wp-block-search__inside-wrapper {
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+	:where(.wp-site-blocks, .editor-styles-wrapper) .wp-block-search__input {
+		min-width: 0;
+		flex: 1 1 10rem;
+	}
+	:where(.wp-site-blocks, .editor-styles-wrapper) .wp-block-search__button {
+		margin-inline-start: 0;
+	}
+}
