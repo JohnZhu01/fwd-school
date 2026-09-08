@@ -32,6 +32,47 @@ Tags: full-site-editing
 }
 
 /* Single Student: portrait beside the student's own information. */
+/* Faculty and Administration share the same card layout. */
+.staff-cards {
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  padding-right: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.staff-card {
+  height: 100%;
+  box-shadow: 5px 5px 0 white, 8px 8px 0 var(--wp--preset--color--button);
+}
+.staff-card .wp-block-post-featured-image {
+  margin: 0 0 0.75rem;
+}
+.staff-card .wp-block-post-featured-image img {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.staff-card .wp-block-post-title {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+.staff-card .taxonomy-staff_role,
+.staff-card .wp-block-post-content {
+  margin-top: 0.5rem;
+}
+.staff-card .taxonomy-staff_role {
+  font-style: italic;
+}
+.staff-card a {
+  color: var(--wp--preset--color--base);
+}
+.staff-card :focus-visible {
+  outline-color: white;
+}
+@media (max-width: 37.5rem) {
+  .wp-block-post-template.staff-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 /* Student listing: fewer columns on narrower screens. */
 .students-listing .student-cards {
   grid-template-columns: repeat(3, minmax(0, 1fr));
