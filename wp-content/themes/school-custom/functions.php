@@ -69,14 +69,14 @@ function school_student_editor_template()
 }
 add_action('init', 'school_student_editor_template', 20);
 
-/* Create matching 2:3 portrait crops when images are uploaded. */
+/* Image Sizes */
 function school_student_image_sizes() {
     add_image_size( 'student-portrait', 320, 480, true );
     add_image_size( 'student-portrait-large', 480, 720, true );
 }
 add_action( 'after_setup_theme', 'school_student_image_sizes' );
 
-/* Make both portrait sizes available in the editor's image-size menu. */
+/* Add portrait sizes available in the editor's image-size menu. */
 function school_student_image_size_names( $sizes ) {
     $sizes['student-portrait'] = __( 'Student Portrait (320 × 480)', 'school-custom' );
     $sizes['student-portrait-large'] = __( 'Student Portrait Large (480 × 720)', 'school-custom' );
