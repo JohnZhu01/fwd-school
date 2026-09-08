@@ -31,3 +31,55 @@ function school_custom_editor_styles() {
     ) );
 }
 add_action( 'after_setup_theme', 'school_custom_editor_styles' );
+
+/* Give new students fixed layout */
+function school_student_editor_template()
+{
+	$student = get_post_type_object('student');
+
+	if (!$student) {
+		return;
+	}
+
+	$student->template = array(
+		array(
+			'core/paragraph',
+			array(
+				'placeholder' => 'Write the student biography here.',
+			),
+		),
+		array(
+			'core/buttons',
+			array(),
+			array(
+				array(
+					'core/button',
+					array(
+						'text' => 'See My Portfolio',
+						'backgroundColor' => 'primary',
+						'textColor' => 'base',
+					),
+				),
+			),
+		),
+	);
+
+	// Temporarily unlocked while building student content.
+	$student->template_lock = false;
+}
+add_action('init', 'school_student_editor_template', 20);
+
+/* Create matching 2:3 portrait crops when images are uploaded. */
+function school_student_image_sizes() {
+    add_image_size( 'student-portrait', 320, 480, true );
+    add_image_size( 'student-portrait-large', 480, 720, true );
+}
+add_action( 'after_setup_theme', 'school_student_image_sizes' );
+
+/* Make both portrait sizes available in the editor's image-size menu. */
+function school_student_image_size_names( $sizes ) {
+    $sizes['student-portrait'] = __( 'Student Portrait (320 × 480)', 'school-custom' );
+    $sizes['student-portrait-large'] = __( 'Student Portrait Large (480 × 720)', 'school-custom' );
+    return $sizes;
+}
+add_filter( 'image_size_names_choose', 'school_student_image_size_names' );
