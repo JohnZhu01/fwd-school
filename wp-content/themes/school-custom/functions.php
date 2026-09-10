@@ -69,6 +69,39 @@ function school_student_editor_template()
 }
 add_action('init', 'school_student_editor_template', 20);
 
+/** Give new staff posts two editable starting blocks. */
+function school_staff_editor_template() {
+    $staff = get_post_type_object( 'staff' );
+
+    if ( ! $staff ) {
+        return;
+    }
+
+    // The Staff Role taxonomy already supplies the job title on staff cards.
+    $staff->template = array(
+        array(
+            'core/paragraph',
+            array( 'placeholder' => 'Write a short staff biography here.' ),
+        ),
+        array(
+            'core/paragraph',
+            array( 'placeholder' => 'Enter an example email address, then link it using mailto:name@example.com.' ),
+        ),
+    );
+    $staff->template_lock = false;
+}
+add_action( 'init', 'school_staff_editor_template', 20 );
+
+/** Show a helpful name prompt when creating a staff post. */
+function school_custom_name_placeholder( $title, $post ) {
+    if ( 'staff' === $post->post_type ) {
+        return __( 'Add staff name', 'school-custom' );
+    }
+
+    return $title;
+}
+add_filter( 'enter_title_here', 'school_custom_name_placeholder', 10, 2 );
+
 /* Image Sizes */
 function school_student_image_sizes() {
     add_image_size( 'student-portrait', 320, 480, true );
