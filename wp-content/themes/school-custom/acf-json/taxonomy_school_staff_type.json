@@ -1,0 +1,70 @@
+{
+    "key": "taxonomy_school_staff_type",
+    "title": "Staff Types",
+    "menu_order": 0,
+    "active": true,
+    "taxonomy": "staff_type",
+    "object_type": [
+        "staff"
+    ],
+    "advanced_configuration": 1,
+    "import_source": "",
+    "import_date": "",
+    "labels": {
+        "name": "Staff Categories",
+        "singular_name": "Staff Category",
+        "menu_name": "Staff Categories",
+        "search_items": "Search Staff Categories",
+        "all_items": "All Staff Categories",
+        "parent_item": "Parent Staff Category",
+        "parent_item_colon": "Parent Staff Category:",
+        "edit_item": "Edit Staff Category",
+        "view_item": "View Staff Category",
+        "update_item": "Update Staff Category",
+        "add_new_item": "Add New Staff Category",
+        "new_item_name": "New Staff Category Name",
+        "not_found": "No Staff Categories found."
+    },
+    "description": "",
+    "capabilities": {
+        "manage_terms": "manage_categories",
+        "edit_terms": "manage_categories",
+        "delete_terms": "manage_categories",
+        "assign_terms": "edit_posts"
+    },
+    "public": true,
+    "publicly_queryable": true,
+    "hierarchical": true,
+    "show_ui": true,
+    "show_in_menu": true,
+    "show_in_nav_menus": true,
+    "show_in_rest": true,
+    "rest_base": "",
+    "rest_namespace": "wp\/v2",
+    "rest_controller_class": "WP_REST_Terms_Controller",
+    "show_tagcloud": true,
+    "show_in_quick_edit": true,
+    "show_admin_column": true,
+    "rewrite": {
+        "permalink_rewrite": "taxonomy_key",
+        "slug": "",
+        "with_front": true,
+        "rewrite_hierarchical": false
+    },
+    "query_var": "taxonomy_key",
+    "query_var_name": "",
+    "default_term": {
+        "default_term_enabled": false,
+        "default_term_name": "",
+        "default_term_slug": "",
+        "default_term_description": ""
+    },
+    "sort": null,
+    "meta_box": "default",
+    "meta_box_cb": "",
+    "meta_box_sanitize_cb": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "not_registered": true,
+    "modified": 1789104654
+}
