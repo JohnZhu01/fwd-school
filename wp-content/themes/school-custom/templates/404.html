@@ -1,16 +1,26 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
-
-<!-- wp:group {"tagName":"main","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained","contentSize":"36rem"}} -->
-<main class="wp-block-group" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)">
-<!-- wp:heading {"level":1,"textAlign":"center"} -->
-<h1 class="wp-block-heading has-text-align-center">Page not found</h1>
+<!-- wp:group {"tagName":"main","align":"full","className":"school-404","layout":{"type":"default"}} -->
+<main class="wp-block-group alignfull school-404">
+<!-- wp:group {"align":"full","className":"school-404-banner","layout":{"type":"default"}} -->
+<div class="wp-block-group alignfull school-404-banner">
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">404.</h1>
 <!-- /wp:heading -->
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">Sorry, this page may have moved or no longer exists. Try searching, or return to the homepage.</p>
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"school-404-content","layout":{"type":"default"}} -->
+<div class="wp-block-group school-404-content">
+<!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">Oh no! We couldn’t find that page!</h2>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Not to worry, you can try searching our website or seeing if any of the links below are helpful.</p>
 <!-- /wp:paragraph -->
-<!-- wp:search {"label":"Search the site","showLabel":true,"buttonText":"Search"} /-->
-<!-- wp:pattern {"slug":"school-custom/back-to-home"} /-->
+<!-- wp:search {"label":"Search the site","showLabel":false,"placeholder":"Search the site…","buttonText":"Search"} /-->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Latest News</h3>
+<!-- /wp:heading -->
+<!-- wp:latest-posts {"postsToShow":6} /-->
+</div>
+<!-- /wp:group -->
 </main>
 <!-- /wp:group -->
-
-<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
