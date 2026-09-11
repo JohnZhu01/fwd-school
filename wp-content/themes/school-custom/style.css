@@ -111,3 +111,60 @@ Tags: full-site-editing
   font-weight: 700;
   text-decoration: none;
 }
+
+/* Missing pages: a full-width banner and a readable search area. */
+body.error404 { padding: 0; }
+body.error404 .wp-site-blocks { padding-top: 0; padding-bottom: 0; }
+.school-404 { margin: 0; background: #fff; min-height: 100vh; }
+.school-404 .school-404-banner {
+  box-sizing: border-box;
+  min-height: 490px;
+  margin: 0;
+  padding: 80px clamp(24px, 4.1vw, 80px);
+  background: #292929;
+}
+.school-404-banner h1 {
+  margin: 0;
+  color: #71003c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.school-404 .school-404-content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 648px;
+  margin: 0 auto;
+  padding: 24px 24px 48px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.school-404-content h2 {
+  margin: 0 0 32px;
+  color: #003c71;
+  font-size: 24px;
+  line-height: 1.4;
+}
+.school-404-content h3 { font-size: 20px; }
+.school-404-content .wp-block-search__input {
+  border: 1px solid #929292;
+  border-radius: 0;
+  padding: 10px;
+  font-size: 16px;
+}
+.school-404-content .wp-block-search__button {
+  border: 0;
+  border-radius: 0;
+  padding: 10px 20px;
+  background: #003c71;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.school-404-content .wp-block-latest-posts li { margin-bottom: 10px; }
+@media (max-width: 37.5rem) {
+  .school-404 .school-404-banner { min-height: 320px; padding-top: 48px; }
+  .school-404-content h2 { font-size: 22px; }
+}
