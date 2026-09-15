@@ -1,15 +1,7 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-
-<!-- wp:heading {"level":1,"style":{"typography":{"textAlign":"center"}}} -->
-<h1 class="wp-block-heading has-text-align-center">News</h1>
-<!-- /wp:heading -->
-
 <!-- wp:group {"tagName":"article","metadata":{"name":"Article"},"layout":{"type":"constrained"}} -->
-<article class="wp-block-group"><!-- wp:query {"queryId":8,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":null,"parents":[],"excludeCurrent":null},"layout":{"contentSize":null,"type":"constrained"}} -->
-<div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|70"}},"layout":{"type":"default"}} -->
-<!-- wp:group -->
-<div class="wp-block-group"><!-- wp:post-title {"isLink":true} /-->
+<article class="wp-block-group"><!-- wp:post-title {"level":1,"isLink":true,"style":{"typography":{"textAlign":"center"}}} /-->
 
 <!-- wp:group {"style":{"typography":{"fontSize":"14px"},"spacing":{"padding":{"right":"0","left":"0"},"blockGap":"0.3rem"}},"layout":{"type":"flex"}} -->
 <div class="wp-block-group" style="padding-right:0;padding-left:0;font-size:14px"><!-- wp:post-date {"format":"F j, Y","isLink":true,"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}},"fontSize":"medium"} /-->
@@ -23,7 +15,7 @@
 
 <!-- wp:post-featured-image {"isLink":true} /-->
 
-<!-- wp:post-excerpt {"moreText":"Continue reading...","showMoreOnNewLine":false} /-->
+<!-- wp:post-content /-->
 
 <!-- wp:group {"style":{"typography":{"fontSize":"14px"},"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex"}} -->
 <div class="wp-block-group" style="font-size:14px"><!-- wp:paragraph {"fontSize":"medium"} -->
@@ -31,18 +23,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:post-terms {"term":"category","fontSize":"medium"} /--></div>
-<!-- /wp:group --></div>
-<!-- /wp:group -->
-<!-- /wp:post-template -->
-
-<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
-<!-- wp:query-pagination-previous /-->
-
-<!-- wp:query-pagination-numbers /-->
-
-<!-- wp:query-pagination-next /-->
-<!-- /wp:query-pagination --></div>
-<!-- /wp:query --></article>
+<!-- /wp:group --></article>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"sidebar"} /-->
