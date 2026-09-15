@@ -168,3 +168,8 @@ body.error404 .wp-site-blocks { padding-top: 0; padding-bottom: 0; }
   .school-404 .school-404-banner { min-height: 320px; padding-top: 48px; }
   .school-404-content h2 { font-size: 22px; }
 }
+
+/* Prevent AOS elements from creating a horizontal scrollbar. */
+body:has([data-aos]) {
+    overflow-x: hidden;
+}
