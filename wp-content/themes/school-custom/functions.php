@@ -22,6 +22,37 @@ function school_custom_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'school_custom_enqueue_styles' );
 
+/** Load lightGallery styles and scripts only on the front page. */
+function school_custom_enqueue_lightgallery() {
+    if ( ! is_front_page() ) {
+        return;
+    }
+
+    wp_enqueue_style(
+        'school-custom-lightgallery',
+        'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/css/lightgallery-bundle.min.css',
+        array(),
+        '2.9.0'
+    );
+
+    wp_enqueue_script(
+        'school-custom-lightgallery',
+        'https://cdn.jsdelivr.net/npm/lightgallery@2.9.0/lightgallery.min.js',
+        array(),
+        '2.9.0',
+        true
+    );
+
+    wp_enqueue_script(
+        'school-custom-lightgallery-settings',
+        get_theme_file_uri( 'assets/js/lightgallery-settings.js' ),
+        array( 'school-custom-lightgallery' ),
+        filemtime( get_theme_file_path( 'assets/js/lightgallery-settings.js' ) ),
+        true
+    );
+}
+add_action( 'wp_enqueue_scripts', 'school_custom_enqueue_lightgallery' );
+
 /** Use the same styles inside the block editor. */
 function school_custom_editor_styles() {
     add_editor_style( array(
@@ -117,5 +148,5 @@ function school_student_image_size_names( $sizes ) {
 }
 add_filter( 'image_size_names_choose', 'school_student_image_size_names' );
 
-// Load custom blocks.
+/* Load custom blocks. */
 require_once get_theme_file_path( 'school-blocks/school-blocks.php' );

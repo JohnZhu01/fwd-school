@@ -8,7 +8,7 @@ return array(
 		'version' => '0.1.0',
 		'title' => 'Scroll Reveal',
 		'category' => 'design',
-		'icon' => 'smiley',
+		'icon' => 'editor-video',
 		'description' => 'Animate content as it scrolls into view.',
 		'example' => array(
 			
