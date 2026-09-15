@@ -173,3 +173,12 @@ body.error404 .wp-site-blocks { padding-top: 0; padding-bottom: 0; }
 body:has([data-aos]) {
     overflow-x: hidden;
 }
+
+h1::after {
+    content: '';
+    width: 5rem;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background-color: #71003c;
+}
