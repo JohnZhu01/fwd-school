@@ -116,3 +116,6 @@ function school_student_image_size_names( $sizes ) {
     return $sizes;
 }
 add_filter( 'image_size_names_choose', 'school_student_image_size_names' );
+
+// Load custom blocks.
+require_once get_theme_file_path( 'school-blocks/school-blocks.php' );

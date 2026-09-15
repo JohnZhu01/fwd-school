@@ -13,13 +13,18 @@ return array(
 		'example' => array(
 			
 		),
+		'attributes' => array(
+			'animation' => array(
+				'type' => 'string',
+				'default' => 'fade-up'
+			)
+		),
 		'supports' => array(
 			'html' => false
 		),
 		'textdomain' => 'scroll-reveal',
 		'editorScript' => 'file:./index.js',
-		'editorStyle' => 'file:./index.css',
-		'style' => 'file:./style-index.css',
+		'viewStyle' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	)
 );

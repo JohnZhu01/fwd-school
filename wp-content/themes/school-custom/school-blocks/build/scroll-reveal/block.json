@@ -8,12 +8,17 @@
   "icon": "smiley",
   "description": "Animate content as it scrolls into view.",
   "example": {},
+  "attributes": {
+    "animation": {
+      "type": "string",
+      "default": "fade-up"
+    }
+  },
   "supports": {
     "html": false
   },
   "textdomain": "scroll-reveal",
   "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
+  "viewStyle": "file:./style-index.css",
   "viewScript": "file:./view.js"
 }

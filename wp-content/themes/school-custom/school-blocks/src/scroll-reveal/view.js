@@ -21,5 +21,7 @@
  */
 
 /* eslint-disable no-console */
-console.log( 'Hello World! (from school-blocks-scroll-reveal block)' );
+import AOS from 'aos';
+
+AOS.init();
 /* eslint-enable no-console */
