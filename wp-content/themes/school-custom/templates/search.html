@@ -1,22 +1,24 @@
-<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+<!-- wp:group {"style":{"position":{"type":"sticky","top":"0px"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:template-part {"slug":"header","tagName":"header"} /--></div>
+<!-- /wp:group -->
 
 <!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"layout":{"type":"constrained"}} -->
-<main class="wp-block-group"><!-- wp:query-title {"type":"search","style":{"typography":{"textAlign":"center"}}} /-->
+<main class="wp-block-group"><!-- wp:query-title {"type":"search","style":{"typography":{"textAlign":"center","lineHeight":"1.8"},"spacing":{"padding":{"bottom":"var:preset|spacing|60"}}}} /-->
 
 <!-- wp:group {"tagName":"article","metadata":{"name":"Article"},"layout":{"type":"constrained"}} -->
 <article class="wp-block-group"><!-- wp:query {"queryId":8,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[],"excludeCurrent":null},"layout":{"contentSize":null,"type":"constrained"}} -->
-<div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|70"}},"layout":{"type":"default"}} -->
+<div class="wp-block-query"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|80","margin":{"bottom":"var:preset|spacing|80"}}},"layout":{"type":"default"}} -->
+<!-- wp:post-title {"isLink":true} /-->
+
 <!-- wp:group -->
-<div class="wp-block-group"><!-- wp:post-title {"isLink":true} /-->
+<div class="wp-block-group"><!-- wp:group {"style":{"typography":{"fontSize":"14px"},"spacing":{"padding":{"right":"0","left":"0"},"blockGap":"0.3rem","margin":{"top":"var:preset|spacing|60"}}},"layout":{"type":"flex"}} -->
+<div class="wp-block-group" style="margin-top:var(--wp--preset--spacing--60);padding-right:0;padding-left:0;font-size:14px"><!-- wp:post-date {"format":"F j, Y","isLink":true,"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}},"fontSize":"small"} /-->
 
-<!-- wp:group {"style":{"typography":{"fontSize":"14px"},"spacing":{"padding":{"right":"0","left":"0"},"blockGap":"0.3rem"}},"layout":{"type":"flex"}} -->
-<div class="wp-block-group" style="padding-right:0;padding-left:0;font-size:14px"><!-- wp:post-date {"format":"F j, Y","isLink":true,"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}},"fontSize":"medium"} /-->
-
-<!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">by</p>
+<!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">by</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:post-author-name {"isLink":true,"fontSize":"medium"} /--></div>
+<!-- wp:post-author-name {"isLink":true,"fontSize":"small"} /--></div>
 <!-- /wp:group -->
 
 <!-- wp:post-featured-image {"isLink":true} /-->
@@ -24,11 +26,11 @@
 <!-- wp:post-excerpt {"moreText":"Continue reading...","showMoreOnNewLine":false} /-->
 
 <!-- wp:group {"style":{"typography":{"fontSize":"14px"},"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"flex"}} -->
-<div class="wp-block-group" style="font-size:14px"><!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">Categories:</p>
+<div class="wp-block-group" style="font-size:14px"><!-- wp:paragraph {"fontSize":"small"} -->
+<p class="has-small-font-size">Categories:</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:post-terms {"term":"category","fontSize":"medium"} /--></div>
+<!-- wp:post-terms {"term":"category","fontSize":"small"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 <!-- /wp:post-template -->
@@ -57,18 +59,18 @@
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading -->
-<h2 class="wp-block-heading">Archives</h2>
-<!-- /wp:heading -->
-
-<!-- wp:archives /--></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:heading -->
 <h2 class="wp-block-heading">Categories</h2>
 <!-- /wp:heading -->
 
 <!-- wp:categories /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading -->
+<h2 class="wp-block-heading">Archives</h2>
+<!-- /wp:heading -->
+
+<!-- wp:archives /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></aside>
 <!-- /wp:group --></main>
