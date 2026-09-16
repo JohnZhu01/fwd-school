@@ -182,3 +182,7 @@ h1::after {
     display: block;
     background-color: #71003c;
 }
+
+.gform_wrapper .gfield_label {
+    font-size: 18px;
+}
