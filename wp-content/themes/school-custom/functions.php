@@ -95,8 +95,8 @@ function school_student_editor_template()
 		),
 	);
 
-	// Temporarily unlocked while building student content.
-	$student->template_lock = false;
+	// Keep the biography and portfolio button in place while allowing content edits.
+	$student->template_lock = 'all';
 }
 add_action('init', 'school_student_editor_template', 20);
 
@@ -123,8 +123,12 @@ function school_staff_editor_template() {
 }
 add_action( 'init', 'school_staff_editor_template', 20 );
 
-/** Show a helpful name prompt when creating a staff post. */
+/** Show a helpful name prompt when creating a student or staff post. */
 function school_custom_name_placeholder( $title, $post ) {
+    if ( 'student' === $post->post_type ) {
+        return __( 'Add student name', 'school-custom' );
+    }
+
     if ( 'staff' === $post->post_type ) {
         return __( 'Add staff name', 'school-custom' );
     }
@@ -132,6 +136,16 @@ function school_custom_name_placeholder( $title, $post ) {
     return $title;
 }
 add_filter( 'enter_title_here', 'school_custom_name_placeholder', 10, 2 );
+
+/** Keep the Student editor's block locks out of the editing controls. */
+function school_student_editor_lock_settings( $settings, $context ) {
+    if ( ! empty( $context->post ) && 'student' === $context->post->post_type ) {
+        $settings['canLockBlocks'] = false;
+    }
+
+    return $settings;
+}
+add_filter( 'block_editor_settings_all', 'school_student_editor_lock_settings', 10, 2 );
 
 /* Image Sizes */
 function school_student_image_sizes() {
@@ -150,3 +164,14 @@ add_filter( 'image_size_names_choose', 'school_student_image_size_names' );
 
 /* Load custom blocks. */
 require_once get_theme_file_path( 'school-blocks/school-blocks.php' );
+
+/** Show every staff member in each group on the Staff page. */
+function school_staff_listing_query( $query, $block ) {
+    if ( is_page( 'staff' ) && 'staff' === ( $block->context['query']['postType'] ?? '' ) ) {
+        $query['posts_per_page'] = -1;
+        $query['offset'] = 0;
+    }
+
+    return $query;
+}
+add_filter( 'query_loop_block_query_vars', 'school_staff_listing_query', 20, 2 );
